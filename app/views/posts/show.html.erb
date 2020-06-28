@@ -1,0 +1,10 @@
+<h2><%= "#{@post.title}" %></h2>
+
+<p><%= link_to "by #{@post.blogger.name}", blogger_path(@post.blogger) %><p><br>
+<h4><%= link_to "#{@post.destination.name}", destination_path(@post.destination.id) %></h4>
+<p><%= @post.content %></p>
+<h4><%= "Current # Likes: #{@post.likes}" %></h4><br>
+
+<%= button_to "LIKE POST", @post, method: :like %><br>
+
+<%= button_to "DELETE POST", @post, method: :delete %>

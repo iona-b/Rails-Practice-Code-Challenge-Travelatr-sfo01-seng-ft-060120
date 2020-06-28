@@ -1,0 +1,9 @@
+<h2><%= "Update Your Blogger Profile" %></h2>
+
+<%= flash[:message] %>
+<%= form_for @blogger do |b| %>
+    Name: <%= b.text_field :name %><br>
+    Bio: <%= b.text_field :bio %><br>
+    Age: <%= b.text_field :age %><br>
+    <%= b.submit %><br>
+<% end %>

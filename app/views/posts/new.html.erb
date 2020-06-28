@@ -1,0 +1,10 @@
+<h2><%= "Create Your Post" %></h2>
+
+<%= flash[:message] %>
+<%= form_for @post do |p| %>
+    Title: <%= p.text_field :title %><br>
+    Content: <%= p.text_field :content %><br>
+    Blogger: <%= p.collection_select :blogger_id, Blogger.all, :id, :name %><br>
+    Destination: <%= p.collection_select :destination_id, Destination.all, :id, :name %><br>
+    <%= p.submit %><br>
+<% end %>

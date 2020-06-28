@@ -1,0 +1,7 @@
+<h2><%= "#{@blogger.name}'s Profile" %></h2>
+
+<h4><%= "Number of Likes: #{@blogger.number_of_likes}"%></h4>
+<h4><%= "Featured Post: " %>
+<%=link_to @blogger.featured_post_title, post_path(@blogger.featured_post) %></h4>
+
+<%= button_to "DELETE BLOGGER", @blogger, method: :delete %>

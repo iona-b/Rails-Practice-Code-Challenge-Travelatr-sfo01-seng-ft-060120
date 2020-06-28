@@ -1,0 +1,8 @@
+<h2><%= "About #{@destination.name}" %></h2><br>
+
+<h3><%= "Featured Posts: " %><br></h3>
+<p><% @destination.featured_posts.each do |p| %>
+<%= link_to p.title, post_path(p) %><br>
+<% end %></p><br>
+
+<p><%= "Average Age of Bloggers Who Have Written About #{@destination.name}: #{@destination.average_age} Years Old" %></p>
